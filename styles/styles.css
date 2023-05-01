@@ -92,6 +92,7 @@ header {
 }
 
 #destacados .carta {
+  display: flexbox;
   background-position: center center center;
   background-size: cover;
   padding: 50px;
@@ -121,9 +122,13 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
-  background-image: url("../imagenes html/focofondo.jpg");
+  background-image: url("../imagenes html/adidasleaguefondo.jpeg");
   background-size: cover;
+}
+
+.kpiscr {
+  color: white;
+  align-items: center;
 }
 
 #fococr li {
