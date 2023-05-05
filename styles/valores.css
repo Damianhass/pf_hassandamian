@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction:column ;
+}
+
+body h1{
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(3, 46, 60, 0.8);
+}
+
+body h2{
+    padding: 60px;
+    letter-spacing: 3px;
+    margin: auto;
+    font-weight: bold;
+}
+
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    grid-gap:20px;
+    padding: 20px;
+}
+
+.container .box{
+    position: relative;
+    height: 400px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0,0.4);
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.container .box::before {
+    position: absolute;
+    content: "";
+    top: 99%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 43, 43);
+    background-image: linear-gradient(315deg,#426bff 0%,#9b86fd 74%);
+    transition: 0.4s;
+}
+
+.container .box h1{
+    font-size: 20px;
+    position: relative;
+}
+
+.container .box:hover h1{
+    color: rgb(7, 0, 109);
+}
+
+.container .box:hover p{
+    color: rgb(0, 0, 0);
+}
+
+.container .box:hover::before {
+    top: 100%;
+}
+
+.container .box .imgbox {
+    width: 100%;
+    height: 50%;
+}
+
+.container .box .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box p{
+    font-size: 18px;
+    position: relative;
+}
+
